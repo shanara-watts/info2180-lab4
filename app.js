@@ -9,8 +9,8 @@ function searchFunction()
     var url = "superheroes.php";
     //Get value entered
     searchVal = document.getElementById("hero").value 
-    var supImg = document.getElementById("supImg"); 
-    supImg.style.opacity = 0;
+    var avgImg = document.getElementById("avgImg"); 
+    avgImg.style.opacity = 0;
     AjaxRequest(url,displaySuperheroes,searchVal)
 }
 
@@ -27,7 +27,7 @@ function AjaxRequest(url,func,search)
         }
         else 
         {
-            alert("There was a problem with the request")
+            alert("There was a problem with your request.")
         }
     };
     mess = url+"?query=" + search
@@ -44,69 +44,69 @@ function displayResponse(message)
 function displaySuperheroes(superhero,search)
 {
     var search = document.getElementById("result");
-    var supImg = document.getElementById("supImg"); 
-    supImg.style.opacity = 1
+    var avgImg = document.getElementById("avgImg"); 
+    avgImg.style.opacity = 1
     if (superhero.includes("Ironman"))
     {
-        supImg.src="ironman.png";
+        avgImg.src="ironman.png";
     }
 
     else if(superhero.includes("Despite super spy Natasha Romanoff’s checkered past,"))
     {
-        supImg.src="widow.png";
+        avgImg.src="widow.png";
     }
 
     else if(superhero.includes("Captain America"))
     {
-        supImg.src="captain.png";
+        avgImg.src="captain.png";
     }
 
     else if(superhero.includes("Captain Marvel"))
     {
-        supImg.src="marvel.png";
+        avgImg.src="marvel.png";
     }
 
     else if(superhero.includes("Hulk"))
     {
-        supImg.src="hulk.png";
+        avgImg.src="hulk.png";
     }
 
     else if(superhero.includes("Black Panther"))
     {
-        supImg.src="blackpanther.png";
+        avgImg.src="blackpanther.png";
     }
 
     else if(superhero.includes("Spiderman"))
     {
-        supImg.src="spiderman.png";
+        avgImg.src="spiderman.png";
     }
 
     else if(superhero.includes("A master marksman and longtime friend"))
     {
-        supImg.src="hawkeye.png";
+        avgImg.src="hawkeye.png";
     }
 
     else if(superhero.includes("The son of Odin"))
     {
-        supImg.src="thor.png";
+        avgImg.src="thor.png";
     }
 
     else if(superhero.includes("Notably powerful, Wanda Maximoff has fought"))
     {
-        supImg.src="witch.png";
+        avgImg.src="witch.png";
     }
 
     else if(superhero.includes("NOT FOUND"))
     {
-        supImg.src="warning.png";
-        supImg.style.height = "50px";
-        supImg.style.width = "50px";
-        supImg.style.marginLeft = "20%";
+        avgImg.src="warning.png";
+        avgImg.style.height = "50px";
+        avgImg.style.width = "50px";
+        avgImg.style.marginLeft = "20%";
     }
 
     else
     {
-        supImg.src="avengers.png";
+        avgImg.src="avengers.png";
     }
     search.innerHTML = superhero
-}
+}}
