@@ -1,0 +1,117 @@
+body
+{
+    background-color: #f5ebdb;
+}
+
+#header
+{
+    margin-top: 0%;
+    line-height: 120px;
+    color: rgb(255, 255, 255);
+    float: top;
+    background-color: #6a81ce;
+}
+
+footer
+{
+    padding: 20px;
+    padding-left: 40%;
+    line-height: 50px;
+    color: antiquewhite;
+    background-color: #6a81ce;
+}
+
+h1
+{
+    font-size: 60px;
+}
+
+#header img
+{
+    margin-top: 5px;
+    margin-left: 200px;
+    padding-right: 20px;
+    height: 100px;
+    margin-bottom: 0;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+/* Default Font*/
+html, body, h1, h2, h3, h4, h5, h6  
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, "Noto Sans", sans-serif;
+    
+}
+
+#instructions
+{
+    margin-left: 30%;
+}
+
+#hero
+{
+    height: 50px;
+    width: 300px;
+    margin-left: 30%;
+    
+    float: left;
+    border-style: outset;
+    border-radius: 2px;
+}
+
+#search
+{
+    background-color: #515bec;
+    height: 55px;
+    width: 100px;
+    margin-left: 10px;
+    text-decoration: solid;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h2
+{
+    font-size: 30px;
+    color: #2691e9;
+    margin-left: 15%;
+}
+
+hr
+{
+    color: #0D5C63;
+    margin-left: 15%;
+    width: 60%;
+}
+
+#result
+{
+    margin-left: 25%;
+}
+
+h5
+{
+    color: red;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+#supImg
+{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-left: 15%;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+
+#result p
+{
+    margin-left: 0%;
+    width: 500px;
+    margin-bottom: 30px;
+}
