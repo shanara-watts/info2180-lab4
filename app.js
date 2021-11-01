@@ -6,10 +6,10 @@ window.onload = function()
 
 function searchFunction()
 {    
-    var url = "superheroes.php";
+    var url = "info2180-lab4/superheroes.php";
     //Get value entered
     searchVal = document.getElementById("hero").value 
-    var avgImg = document.getElementById("avgImg"); 
+    var avgImg = document.getElementById("avgImg");
     avgImg.style.opacity = 0;
     AjaxRequest(url,displaySuperheroes,searchVal)
 }
@@ -20,8 +20,8 @@ function AjaxRequest(url,func,search)
 
     httpRequest.onreadystatechange = function(Event){
         if (httpRequest.readyState === XMLHttpRequest.DONE)
-    {
-        if (httpRequest.status === 200)
+        {
+            if (httpRequest.status === 200)
         {
             func(httpRequest.responseText,search)
         }
@@ -32,7 +32,7 @@ function AjaxRequest(url,func,search)
     };
     mess = url+"?query=" + search
     httpRequest.requestType = "json"
-    httpRequest.open("GET", mess);
+    httpRequest.open("GET", mess,true);
     httpRequest.send();
 }
 
@@ -46,34 +46,14 @@ function displaySuperheroes(superhero,search)
     var search = document.getElementById("result");
     var avgImg = document.getElementById("avgImg"); 
     avgImg.style.opacity = 1
-    if (superhero.includes("Ironman"))
-    {
-        avgImg.src="ironman.png";
-    }
-
-    else if(superhero.includes("Despite super spy Natasha Romanoff’s checkered past,"))
-    {
-        avgImg.src="widow.png";
-    }
-
-    else if(superhero.includes("Captain America"))
+    if (superhero.includes("Captain America"))
     {
         avgImg.src="captain.png";
     }
 
-    else if(superhero.includes("Captain Marvel"))
+    else if(superhero.includes("Ironman"))
     {
-        avgImg.src="marvel.png";
-    }
-
-    else if(superhero.includes("Hulk"))
-    {
-        avgImg.src="hulk.png";
-    }
-
-    else if(superhero.includes("Black Panther"))
-    {
-        avgImg.src="blackpanther.png";
+        avgImg.src="ironman.png";
     }
 
     else if(superhero.includes("Spiderman"))
@@ -81,32 +61,43 @@ function displaySuperheroes(superhero,search)
         avgImg.src="spiderman.png";
     }
 
-    else if(superhero.includes("A master marksman and longtime friend"))
+    else if(superhero.includes("Captain Marvel"))
+    {
+        avgImg.src="marvel.png";
+    }
+
+    else if(superhero.includes("Black Widow"))
+    {
+        avgImg.src="widow.png";
+    }
+
+    else if(superhero.includes("Hulk"))
+    {
+        avgImg.src="hulk.png";
+    }
+
+    else if(superhero.includes("Hawkeye"))
     {
         avgImg.src="hawkeye.png";
     }
 
-    else if(superhero.includes("The son of Odin"))
+    else if(superhero.includes("Black Panther"))
+    {
+        avgImg.src="blackpanther.png";
+    }
+
+    else if(superhero.includes("Thor"))
     {
         avgImg.src="thor.png";
     }
 
-    else if(superhero.includes("Notably powerful, Wanda Maximoff has fought"))
+    else if(superhero.includes("Scarlett Witch"))
     {
         avgImg.src="witch.png";
     }
 
-    else if(superhero.includes("NOT FOUND"))
-    {
-        avgImg.src="warning.png";
-        avgImg.style.height = "50px";
-        avgImg.style.width = "50px";
-        avgImg.style.marginLeft = "20%";
-    }
+    else (superhero.includes("Superhero not found"))
 
-    else
-    {
-        avgImg.src="avengers.png";
-    }
     search.innerHTML = superhero
+
 }}
